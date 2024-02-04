@@ -20,6 +20,8 @@ const MoviesDB = require("./modules/moviesDB.js");
 app.use(cors());
 app.use(express.json());
 
+console.log('MongoDB Connection String:', process.env.MONGODB_CONN_STRING);
+
 const db = new MoviesDB();
 
 app.get('/', (req, res) => {
